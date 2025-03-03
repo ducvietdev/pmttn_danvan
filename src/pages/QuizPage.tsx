@@ -29,8 +29,8 @@ const QuizPage = () => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          alert("Hết thời gian! Bài thi sẽ tự động nộp.");
-          handleSubmit();
+          // alert("Hết thời gian! Bài thi sẽ tự động nộp.");
+          handleSubmit(true);
           return 0;
         }
         return prev - 1;
@@ -44,8 +44,11 @@ const QuizPage = () => {
     setAnswers((prev) => ({ ...prev, [questionId]: option }));
   };
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const handleSubmit = (autoSubmit = false) => {
+    if (autoSubmit || window.confirm("Bạn có chắc chắn muốn nộp bài không?")) {
+      setSubmitted(true);
+      setTimeLeft(0); // Dừng thời gian
+    }
   };
 
   const correctAnswers = questions.reduce((count, q) => {
@@ -55,7 +58,9 @@ const QuizPage = () => {
   return (
     <div className="container mt-5">
       <h2>Bộ đề {id}</h2>
-      <p><strong>Thời gian còn lại: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")} phút</strong></p>
+      {!submitted && (
+        <p><strong>Thời gian còn lại: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")} phút</strong></p>
+      )}
 
       {questions.map((q, index) => (
         <div key={q.id} className="mb-3" style={{ position: "relative" }}>
@@ -94,12 +99,15 @@ const QuizPage = () => {
       ))}
       
       {!submitted ? (
-        <button className="btn btn-primary" onClick={handleSubmit}>Nộp bài</button>
+        <button className="btn btn-primary" onClick={() => handleSubmit()}>Nộp bài</button>
       ) : (
         <div className="mt-4">
           <h3>Kết quả bài thi</h3>
           <p>Bạn đã trả lời đúng {correctAnswers} / {questions.length} câu.</p>
           <button className="btn btn-secondary" onClick={() => setReview(true)}>Xem lại đáp án</button>
+          {review && (
+            <button className="btn btn-warning mt-2" onClick={() => navigate("/select")}>Quay về chọn bộ đề mới</button>
+          )}
         </div>
       )}
     </div>
