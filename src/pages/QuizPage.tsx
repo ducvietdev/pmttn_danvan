@@ -12,7 +12,7 @@ const QuizPage = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(10); // 25 phút
+  const [timeLeft, setTimeLeft] = useState(1500); // 25 phút
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [submitted, setSubmitted] = useState(false);
   const [review, setReview] = useState(false);
