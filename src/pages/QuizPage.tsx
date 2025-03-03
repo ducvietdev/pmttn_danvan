@@ -12,7 +12,9 @@ const QuizPage = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(1500); // 25 phút
+  // const [timeLeft, setTimeLeft] = useState(1500); // 25 phút
+  const [timeLeft, setTimeLeft] = useState(10); // 25 phút
+
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [submitted, setSubmitted] = useState(false);
   const [review, setReview] = useState(false);
@@ -23,14 +25,17 @@ const QuizPage = () => {
     if (questions.length === 0) {
       alert("Vui lòng chọn bộ đề trước!");
       navigate("/select");
+      return;
     }
 
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          // alert("Hết thời gian! Bài thi sẽ tự động nộp.");
-          handleSubmit(true);
+          if (!submitted) {
+            alert("Thời gian làm bài của bạn đã hết, vui lòng kiểm tra kết quả!");
+            handleSubmit(true); // Không gọi confirm khi hết giờ
+          }
           return 0;
         }
         return prev - 1;
@@ -38,18 +43,24 @@ const QuizPage = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [questions, navigate]);
+  }, [questions, navigate, submitted]); // Thêm `submitted` vào dependencies
+
 
   const handleChange = (questionId: number, option: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: option }));
   };
 
   const handleSubmit = (autoSubmit = false) => {
-    if (autoSubmit || window.confirm("Bạn có chắc chắn muốn nộp bài không?")) {
+    if (!autoSubmit && !window.confirm("Bạn có chắc chắn muốn nộp bài không?")) {
+      return;
+    }
+
+    if (!submitted) {  // Tránh việc chạy lại nhiều lần
       setSubmitted(true);
       setTimeLeft(0); // Dừng thời gian
     }
   };
+
 
   const correctAnswers = questions.reduce((count, q) => {
     return answers[q.id] === q.answer ? count + 1 : count;
@@ -66,10 +77,10 @@ const QuizPage = () => {
         <div key={q.id} className="mb-3" style={{ position: "relative" }}>
           {submitted && review && (
             <span style={{
-              position: "absolute", 
-              left: "-20px", 
-              color: answers[q.id] === q.answer ? "green" : "red", 
-              fontSize: "20px", 
+              position: "absolute",
+              left: "-20px",
+              color: answers[q.id] === q.answer ? "green" : "red",
+              fontSize: "20px",
               fontWeight: "bold"
             }}>
               {answers[q.id] === q.answer ? "✔" : "✘"}
@@ -78,16 +89,16 @@ const QuizPage = () => {
           <p><strong>{index + 1}. {q.question}</strong></p>
           {Object.entries(q.options).map(([key, value]) => (
             <div key={key}>
-              <input 
-                type="radio" 
-                name={`question-${q.id}`} 
-                id={`option-${q.id}-${key}`} 
+              <input
+                type="radio"
+                name={`question-${q.id}`}
+                id={`option-${q.id}-${key}`}
                 onChange={() => handleChange(q.id, key)}
                 checked={answers[q.id] === key}
                 disabled={submitted}
               />
-              <label htmlFor={`option-${q.id}-${key}`} 
-                style={submitted && review ? { 
+              <label htmlFor={`option-${q.id}-${key}`}
+                style={submitted && review ? {
                   color: key === q.answer ? "green" : (answers[q.id] === key ? "red" : "black"),
                   fontWeight: key === q.answer ? "bold" : "normal"
                 } : {}}>
@@ -97,7 +108,7 @@ const QuizPage = () => {
           ))}
         </div>
       ))}
-      
+
       {!submitted ? (
         <button className="btn btn-primary" onClick={() => handleSubmit()}>Nộp bài</button>
       ) : (
