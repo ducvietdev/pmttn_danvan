@@ -8,28 +8,48 @@ interface Question {
   answer: string;
 }
 
+const shuffleOptions = (question: Question) => {
+  const optionEntries = Object.entries(question.options);
+  const shuffled = [...optionEntries].sort(() => Math.random() - 0.5);
+  
+  const newOptions: { [key: string]: string } = {};
+  let newAnswerKey = "";
+
+  shuffled.forEach(([key, value], index) => {
+    const newKey = String.fromCharCode(65 + index); // A, B, C, D
+    newOptions[newKey] = value;
+    if (key === question.answer) {
+      newAnswerKey = newKey;
+    }
+  });
+
+  return { ...question, options: newOptions, answer: newAnswerKey };
+};
+
 const QuizPage = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(1500); // 25 phút
+  const [timeLeft, setTimeLeft] = useState(10); // 25 phút
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [submitted, setSubmitted] = useState(false);
   const [review, setReview] = useState(false);
-
-  const questions: Question[] = location.state?.questions || [];
+  const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
-    if (questions.length === 0) {
+    if (!location.state?.questions?.length) {
       alert("Vui lòng chọn bộ đề trước!");
       navigate("/select");
+      return;
     }
+
+    // Trộn đáp án mỗi lần reload
+    setShuffledQuestions(location.state.questions.map(shuffleOptions));
 
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          // alert("Hết thời gian! Bài thi sẽ tự động nộp.");
           handleSubmit(true);
           return 0;
         }
@@ -38,7 +58,7 @@ const QuizPage = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [questions, navigate]);
+  }, [location.state?.questions, navigate]);
 
   const handleChange = (questionId: number, option: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: option }));
@@ -51,7 +71,7 @@ const QuizPage = () => {
     }
   };
 
-  const correctAnswers = questions.reduce((count, q) => {
+  const correctAnswers = shuffledQuestions.reduce((count, q) => {
     return answers[q.id] === q.answer ? count + 1 : count;
   }, 0);
 
@@ -62,7 +82,7 @@ const QuizPage = () => {
         <p><strong>Thời gian còn lại: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")} phút</strong></p>
       )}
 
-      {questions.map((q, index) => (
+      {shuffledQuestions.map((q, index) => (
         <div key={q.id} className="mb-3" style={{ position: "relative" }}>
           {submitted && review && (
             <span style={{
@@ -103,7 +123,7 @@ const QuizPage = () => {
       ) : (
         <div className="mt-4">
           <h3>Kết quả bài thi</h3>
-          <p>Bạn đã trả lời đúng {correctAnswers} / {questions.length} câu.</p>
+          <p>Bạn đã trả lời đúng {correctAnswers} / {shuffledQuestions.length} câu.</p>
           <button className="btn btn-secondary" onClick={() => setReview(true)}>Xem lại đáp án</button>
           {review && (
             <button className="btn btn-warning mt-2" onClick={() => navigate("/select")}>Quay về chọn bộ đề mới</button>
