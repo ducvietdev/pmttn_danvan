@@ -3,9 +3,9 @@
     "id": 1,
     "question": "Đồng chí cho biết nội dung 'Dân vận là gì' được Chủ tịch Hồ Chí Minh viết trong bài 'Dân vận'?",
     "options": {
-      "A": "Dân vận là vận động tất cả lực lượng của mỗi một người dân không để sót một người dân nào.",
-      "B": "Là vận động tất cả góp thành lực lượng toàn dân, để thực hành những công việc nên làm.",
-      "C": "Là vận động không để sót một người dân nào, góp thành lực lượng toàn dân."
+      "A": "Dân vận là vận động tất cà lực lượng của mỗi một người dân không để sót một người dân nào, góp thành lực lượng toàn dân, để thực hành những công việc nên làm, những công việc Chính phủ và đoàn thể đã giao cho.",
+      "B": "Là vận động tât cả góp thành lực lượng toàn dân, để thực hành những công việc nên làm, những công việc Chính phủ và đoàn thể giao cho.",
+      "C": "Là vận động không để sót một người dân nào, góp thành lực lượng toàn dân, để thực hành những công việc nên làm, những công việc Chính phủ giao"
     },
     "answer": "A"
   },
