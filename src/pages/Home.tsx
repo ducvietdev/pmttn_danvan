@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="container text-center mt-5">
+    <div className="container text-center mt-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <h1>PHẦN MỀM THI TRẮC NGHIỆM DÂN VẬN</h1>
       <button
         className="btn btn-primary mt-3"

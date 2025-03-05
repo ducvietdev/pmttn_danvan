@@ -44,6 +44,7 @@ const QuizSelection = () => {
       <div className="d-flex flex-wrap justify-content-center">
         {Array.from({ length: 10 }, (_, i) => (
           <button
+            style={{marginRight: 8}}
             key={i + 1}
             className="btn btn-outline-primary m-2"
             onClick={() => fetchRandomQuestions(i + 1)}

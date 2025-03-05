@@ -30,7 +30,7 @@ const QuizPage = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(10); // 25 phút
+  const [timeLeft, setTimeLeft] = useState(1500); // 25 phút
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [submitted, setSubmitted] = useState(false);
   const [review, setReview] = useState(false);
@@ -76,7 +76,7 @@ const QuizPage = () => {
   }, 0);
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={{padding: '16px'}}>
       <h2>Bộ đề {id}</h2>
       {!submitted && (
         <p><strong>Thời gian còn lại: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")} phút</strong></p>
