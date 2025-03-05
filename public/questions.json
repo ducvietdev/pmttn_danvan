@@ -487,7 +487,7 @@
       "B": "03",
       "C": "05"
     },
-    "answer": "A"
+    "answer": "B"
   },
   {
     "id": 49,
@@ -547,7 +547,7 @@
       "B": "Duy trì, xây dựng, phát triển sáng tạo những mô hình, điển hình “Dân vận khéo”, “Đơn vị dân vận tốt” trên các lĩnh vực.",
       "C": "Duy trì, xây dựng, phát triển sáng tạo những mô hình, điển hình “Dân vận khéo”, “Đơn vị Dân vận tốt”."
     },
-    "answer": "A"
+    "answer": "B"
   },
   {
     "id": 55,
@@ -607,7 +607,7 @@
       "B": "Tổ chức học tập tư tưởng Chủ tịch Hồ Chí Minh, các nghị quyết, chỉ thị của Đảng về công tác dân vận, phong trào thi đua, nhất là Phong trào thi đua “Dân vận khéo”, xây dựng “Đơn vị dân vận tốt” trong tình hình mới.",
       "C": "Tổ chức học tập, quán triệt sâu sắc tư tưởng Chủ tịch Hồ Chí Minh, các nghị quyết, chỉ thị của Đảng về công tác dân vận, phong trào thi đua trong tình hình mới."
     },
-    "answer": "A"
+    "answer": "C"
   },
   {
     "id": 61,
@@ -618,7 +618,7 @@
       "C": "05",
       "D": "06"
     },
-    "answer": "A"
+    "answer": "B"
   },
   {
     "id": 62,
@@ -795,7 +795,7 @@
       "C": "05",
       "D": "06"
     },
-    "answer": "C"
+    "answer": "D"
   },
   {
     "id": 79,
@@ -906,7 +906,8 @@
     "options": {
       "A": "Mọi công dân thực hiện dân chủ tại xã, phường, thị trấn, tại thôn, tổ dân phố nơi mình cư trú.",
       "B": "Công dân là cán bộ, công chức, viên chức, người lao động thực hiện dân chủ tại các cơ quan, đơn vị nơi mình công tác. Trường hợp các cơ quan, đơn vị có đơn vị trực thuộc thì việc thực hiện dân chủ tại đơn vị trực thuộc của cơ quan, đơn vị do người đứng đầu cơ quan, đơn vị quyết định.",
-      "C": "Công dân là người lao động thực hiện dân chủ tại các tổ chức có sử dụng lao động nơi mình có giao kết hợp đồng lao động. Trường hợp tổ chức có sử dụng lao động có đơn vị trực thuộc thì việc thực hiện dân chủ tại đơn vị trực thuộc thực hiện theo quy định tại điều lệ, nội quy, quy định, quy chế cùa tổ chức có sử dụng lao động và pháp luật có liên quan."
+      "C": "Công dân là người lao động thực hiện dân chủ tại các tổ chức có sử dụng lao động nơi mình có giao kết hợp đồng lao động. Trường hợp tổ chức có sử dụng lao động có đơn vị trực thuộc thì việc thực hiện dân chủ tại đơn vị trực thuộc thực hiện theo quy định tại điều lệ, nội quy, quy định, quy chế cùa tổ chức có sử dụng lao động và pháp luật có liên quan.",
+      "D": "Cả 3 nội dung trên"
     },
     "answer": "D"
   },
@@ -1070,7 +1071,7 @@
       "C": "Quyết định số 1953/QĐ-BQP ngày 16/5/2019 của Bộ trưởng Bộ Quốc phòng.",
       "D": "Quyết định số 1954/QĐ-BQP ngày 16/5/2019 của Bộ trưởng Bộ Quốc phòng."
     },
-    "answer": "B"
+    "answer": "C"
   },
   {
     "id": 105,
@@ -1251,7 +1252,8 @@
     "options": {
       "A": "Tăng cường sự lãnh đạo, chỉ đạo của cấp ủy, tổ chức đảng; nâng cao nhận thức, trách nhiệm của cả hệ thống chính trị đổi với công tác dân vận ở vùng đồng bào dân tộc thiểu sổ.",
       "B": "Tăng cường đổi mới công tác dân vận trong các cơ quan nhà nước; rà soát ban hành và thực hiện tốt chính sách dân tộc. Đổi mới nội dung, phương thức hoạt động của Mặt trận Tổ quốc và các tổ chức chính trị - xã hội, tổ chức xã hội trong vùng đồng bào dân tộc thiểu số.",
-      "C": "Phối hợp chặt chẽ giữa công tác dân vận vùng đồng bào dân tộc thiểu số với công tác đối ngoại nhân dân trong bảo vệ biên giới; đấu tranh chống âm mưu phá hoại của các thế lực thù địch. Xây dựng, củng cố các tổ chức, bộ máy, đội ngũ cán bộ dân vận; đổi mới phương thức công tác dân vận ở vùng đồng bào dân tộc thiểu số."
+      "C": "Phối hợp chặt chẽ giữa công tác dân vận vùng đồng bào dân tộc thiểu số với công tác đối ngoại nhân dân trong bảo vệ biên giới; đấu tranh chống âm mưu phá hoại của các thế lực thù địch. Xây dựng, củng cố các tổ chức, bộ máy, đội ngũ cán bộ dân vận; đổi mới phương thức công tác dân vận ở vùng đồng bào dân tộc thiểu số.",
+      "D": "Cả 3 nội dung trên"
     },
     "answer": "D"
   },
@@ -1395,7 +1397,7 @@
       "B": "Đổi mới công tác dân vận trong cơ quan nhà nước; rà soát, ban hành và thực hiện tốt chính sách dân tộc",
       "C": "Đổi mới nội dung, phương thức hoạt động của Mặt trân Tổ quốc và các tổ chức chính trị - xã hội, tổ chức xã hội trong vùng đồng bào dân tộc thiểu số."
     },
-    "answer": "A"
+    "answer": "C"
   },
   {
     "id": 136,
@@ -1415,7 +1417,7 @@
       "B": "Đảm bảo và thực hiện chính sách phát triển toàn diện, từng bước nâng cao đời sống vật chất và tinh thần của đồng bào dân tộc thiểu số.",
       "C": "Đảm bảo việc giữ gìn tiếng nói, chữ viết, bản sắc dân tộc, phát huy những phong tục, tập quán, truyền thống và văn hóa tốt đẹp của mỗi dân tộc.",
       "D": "Các dân tộc có trách nhiệm tôn trọng phong tục, tập quán của nhau, góp phần xây dựng nên văn hóa dân tộc Việt Nam tiên tiến, đậm đà bản sắc.",
-      "E": "Tất cả các phương án trên."
+      "E": "Tất cả các nguyên tắc trên."
     },
     "answer": "E"
   },
