@@ -76,7 +76,7 @@ const QuizPage = () => {
   }, 0);
 
   return (
-    <div className="container mt-5" style={{padding: '16px'}}>
+    <div className="container mt-5" style={{padding: '2rem'}}>
       <h2>Bộ đề {id}</h2>
       {!submitted && (
         <p><strong>Thời gian còn lại: {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")} phút</strong></p>
