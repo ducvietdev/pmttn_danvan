@@ -11,6 +11,12 @@ const Home = () => {
       >
         Bắt đầu
       </button>
+      <button
+        className="btn btn-primary mt-3"
+        onClick={() => navigate("/exam")}
+      >
+        Thi thử
+      </button>
     </div>
   );
 };

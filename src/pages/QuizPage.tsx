@@ -126,7 +126,7 @@ const QuizPage = () => {
           <p>Bạn đã trả lời đúng {correctAnswers} / {shuffledQuestions.length} câu.</p>
           <button className="btn btn-secondary" onClick={() => setReview(true)}>Xem lại đáp án</button>
           {review && (
-            <button className="btn btn-warning mt-2" onClick={() => navigate("/select")}>Quay về chọn bộ đề mới</button>
+            <button className="btn btn-warning mt-2" onClick={() => navigate(location.state?.from || "/select")}>Quay về chọn bộ đề mới</button>
           )}
         </div>
       )}

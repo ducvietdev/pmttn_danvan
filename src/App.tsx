@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import QuizSelection from "./pages/QuizSelection";
 import QuizPage from "./pages/QuizPage";
 import ResultPage from "./pages/ResultPage";
+import ExamSelection from "./pages/ExamSelection";
 // import { useEffect, useState } from "react";
 
 // // Định nghĩa kiểu dữ liệu câu hỏi
@@ -47,6 +48,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/select" element={<QuizSelection />} />
+        <Route path="/exam" element={<ExamSelection />} />
         <Route path="/quiz/:id" element={<QuizPage />} />
         <Route path="/result" element={<ResultPage />} />
       </Routes>
