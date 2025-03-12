@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface Question {
   id: number;
@@ -6,63 +7,63 @@ interface Question {
   options: { [key: string]: string };
 }
 
-const QUIZ_STORAGE_KEY = "savedQuizzes";
-
-// Hàm trộn ngẫu nhiên mảng
-const shuffleArray = <T,>(array: T[]): T[] => [...array].sort(() => Math.random() - 0.5);
-
-// Hàm trộn ngẫu nhiên đáp án của một câu hỏi
-const getShuffledOptions = (options: { [key: string]: string }) => {
-  return Object.fromEntries(shuffleArray(Object.entries(options)));
+const shuffleArray = <T,>(array: T[]): T[] => {
+  return [...array].sort(() => Math.random() - 0.5);
 };
 
-// Lấy dữ liệu đề thi từ localStorage
-const getStoredQuizzes = (): Record<number, Question[]> => {
-  const stored = localStorage.getItem(QUIZ_STORAGE_KEY);
-  return stored ? JSON.parse(stored) : {};
+const generateQuizSets = (questions: Question[], setCount: number, setSize: number) => {
+  const shuffledQuestions = shuffleArray(questions);
+  return Array.from({ length: setCount }, (_, i) => {
+    return shuffledQuestions.slice(i * setSize, (i + 1) * setSize);
+  });
 };
 
 const ExamSelection = () => {
   const navigate = useNavigate();
+  const [quizSets, setQuizSets] = useState<Question[][]>(() => {
+    const savedSets = localStorage.getItem("quizSets");
+    return savedSets ? JSON.parse(savedSets) : [];
+  });
 
-  const fetchRandomQuestions = async (quizId: number) => {
-    try {
-      console.log("Đang tải dữ liệu...");
-      let quizzes = getStoredQuizzes();
-
-      if (!quizzes[1] || !quizzes[2] || !quizzes[3]) {
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      try {
+        console.log("Đang tải dữ liệu...");
         const response = await fetch("/questions.json");
         if (!response.ok) throw new Error(`Lỗi HTTP: ${response.status}`);
-
+        
         const data: Question[] = await response.json();
         if (!Array.isArray(data) || data.length < 140) {
-          throw new Error("Dữ liệu không hợp lệ hoặc không đủ câu hỏi!");
+          throw new Error("Dữ liệu không hợp lệ hoặc không đủ số lượng câu hỏi!");
         }
-
-        // Lấy ngẫu nhiên 140 câu từ dữ liệu gốc
-        const selectedPool = shuffleArray(data).slice(0, 140);
-
-        // Tạo 3 bộ đề, mỗi đề có 50 câu, có thể có câu trùng nhau
-        quizzes = {
-          1: Array.from({ length: 50 }, () => selectedPool[Math.floor(Math.random() * 140)]),
-          2: Array.from({ length: 50 }, () => selectedPool[Math.floor(Math.random() * 140)]),
-          3: Array.from({ length: 50 }, () => selectedPool[Math.floor(Math.random() * 140)]),
-        };
-
-        localStorage.setItem(QUIZ_STORAGE_KEY, JSON.stringify(quizzes));
+        
+        const quizSets = generateQuizSets(data, 3, 50);
+        setQuizSets(quizSets);
+        localStorage.setItem("quizSets", JSON.stringify(quizSets));
+      } catch (error) {
+        console.error("Lỗi tải câu hỏi:", error);
+        alert("Không thể tải câu hỏi, vui lòng thử lại!");
       }
+    };
+    
+    if (!localStorage.getItem("quizSets")) {
+      fetchQuestions();
+    }
+  }, []);
 
-      // Lấy đề từ localStorage, xáo trộn thứ tự câu hỏi và xáo trộn đáp án
-      const selectedQuestions = shuffleArray(quizzes[quizId]).map((q) => ({
-        ...q,
-        options: getShuffledOptions(q.options),
-      }));
+  const handleQuizStart = (quizId: number) => {
+    const questionsWithShuffledOptions = quizSets[quizId - 1]?.map((q) => ({
+      ...q,
+      options: shuffleArray(Object.entries(q.options)).reduce((acc, [key, value]) => {
+        acc[key] = value;
+        return acc;
+      }, {} as { [key: string]: string }),
+    }));
 
-      console.log("Câu hỏi đã chọn:", selectedQuestions);
-      navigate(`/quiz/${quizId}`, { state: { questions: selectedQuestions, from: "/exam" } });
-    } catch (error) {
-      console.error("Lỗi tải câu hỏi:", error);
-      alert("Không thể tải câu hỏi, vui lòng thử lại!");
+    if (questionsWithShuffledOptions) {
+      navigate(`/quiz/${quizId}`, { state: { questions: questionsWithShuffledOptions, from: "/exam" } });
+    } else {
+      alert("Không tìm thấy bộ đề, vui lòng thử lại!");
     }
   };
 
@@ -70,16 +71,16 @@ const ExamSelection = () => {
     <div className="container mt-5 text-center">
       <h2>Chọn bộ đề</h2>
       <div className="d-flex flex-wrap justify-content-center">
-        {[1, 2, 3].map((quizId) => (
+        {quizSets.length > 0 ? quizSets.map((_, i) => (
           <button
-            key={quizId}
             style={{ marginRight: 8 }}
+            key={i + 1}
             className="btn btn-outline-primary m-2"
-            onClick={() => fetchRandomQuestions(quizId)}
+            onClick={() => handleQuizStart(i + 1)}
           >
-            Bộ đề {quizId}
+            Bộ đề {i + 1}
           </button>
-        ))}
+        )) : <p>Đang tải câu hỏi...</p>}
       </div>
     </div>
   );
