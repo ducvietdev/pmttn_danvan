@@ -69,6 +69,9 @@ const QuizPage = () => {
       setSubmitted(true);
       setTimeLeft(0); // Dừng thời gian
     }
+
+    // Xóa localStorage khi nộp bài
+    localStorage.removeItem("quizSets");
   };
 
   const correctAnswers = shuffledQuestions.reduce((count, q) => {
