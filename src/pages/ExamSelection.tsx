@@ -7,15 +7,14 @@ interface Question {
   options: { [key: string]: string };
 }
 
-const shuffleArray = <T,>(array: T[]): T[] => {
-  return [...array].sort(() => Math.random() - 0.5);
-};
+const generateQuizSets = (questions: Question[]) => {
+  if (questions.length < 140) throw new Error("Dữ liệu không đủ số lượng câu hỏi!");
 
-const generateQuizSets = (questions: Question[], setCount: number, setSize: number) => {
-  const shuffledQuestions = shuffleArray(questions);
-  return Array.from({ length: setCount }, (_, i) => {
-    return shuffledQuestions.slice(i * setSize, (i + 1) * setSize);
-  });
+  return [
+    questions.slice(0, 50), // Đề 1: 50 câu đầu
+    questions.slice(50, 100), // Đề 2: 50 câu tiếp theo
+    [...questions.slice(100, 140), ...questions.slice(0, 10)], // Đề 3: 40 câu còn lại + 10 câu đầu tiên
+  ];
 };
 
 const ExamSelection = () => {
@@ -31,13 +30,10 @@ const ExamSelection = () => {
         console.log("Đang tải dữ liệu...");
         const response = await fetch("/questions.json");
         if (!response.ok) throw new Error(`Lỗi HTTP: ${response.status}`);
-        
+
         const data: Question[] = await response.json();
-        if (!Array.isArray(data) || data.length < 140) {
-          throw new Error("Dữ liệu không hợp lệ hoặc không đủ số lượng câu hỏi!");
-        }
-        
-        const quizSets = generateQuizSets(data, 3, 50);
+        const quizSets = generateQuizSets(data);
+
         setQuizSets(quizSets);
         localStorage.setItem("quizSets", JSON.stringify(quizSets));
       } catch (error) {
@@ -45,23 +41,15 @@ const ExamSelection = () => {
         alert("Không thể tải câu hỏi, vui lòng thử lại!");
       }
     };
-    
+
     if (!localStorage.getItem("quizSets")) {
       fetchQuestions();
     }
   }, []);
 
   const handleQuizStart = (quizId: number) => {
-    const questionsWithShuffledOptions = quizSets[quizId - 1]?.map((q) => ({
-      ...q,
-      options: shuffleArray(Object.entries(q.options)).reduce((acc, [key, value]) => {
-        acc[key] = value;
-        return acc;
-      }, {} as { [key: string]: string }),
-    }));
-
-    if (questionsWithShuffledOptions) {
-      navigate(`/quiz/${quizId}`, { state: { questions: questionsWithShuffledOptions, from: "/exam" } });
+    if (quizSets[quizId - 1]) {
+      navigate(`/quiz/${quizId}`, { state: { questions: quizSets[quizId - 1], from: "/exam" } });
     } else {
       alert("Không tìm thấy bộ đề, vui lòng thử lại!");
     }
