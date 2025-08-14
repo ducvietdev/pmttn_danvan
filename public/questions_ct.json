@@ -1,0 +1,255 @@
+[
+  {
+    "id": 1,
+    "question": "Đảng ta lần đầu tiên đề cập đến hội nhập, với quan điểm: “Xây dựng một nền kinh tế mở, hội nhập với khu vực và thế giới” vào thời gian nào?",
+    "options": {
+      "A": "Đại hội Đại biểu toàn quốc lần thứ VI.",
+      "B": "Đại hội Đại biểu toàn quốc lần thứ VII.",
+      "C": "Đại hội Đại biểu toàn quốc lần thứ VIII.",
+      "D": "Đại hội Đại biểu toàn quốc lần thứ IX."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 2,
+    "question": "Hoạt động đối ngoại quốc phòng tiến hành bằng phương pháp nào?",
+    "options": {
+      "A": "Đàm phán và các hình thức hòa bình khác.",
+      "B": "Chạy đua vũ trang.",
+      "C": "Đối ngoại song phương.",
+      "D": "Đối ngoại đa phương."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 3,
+    "question": "Phương châm chỉ đạo trong hội nhập quốc tế, đối ngoại quốc phòng?",
+    "options": {
+      "A": "Chủ động, tích cực, chắc chắn, linh hoạt, hiệu quả.",
+      "B": "Tích cực, chủ động, chắc chắn, linh hoạt, hiệu quả.",
+      "C": "Tích cực, chủ động, chắc chắn, hiệu quả, linh hoạt.",
+      "D": "Chủ động, tích cực, linh hoạt, hiệu quả, chắc chắn."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 4,
+    "question": "Hiện nay nước ta có quan hệ đối tác chiến lược toàn diện với bao nhiêu quốc gia?",
+    "options": {
+      "A": "13 nước (Trung Quốc, Nga, Ấn Độ, Hàn Quốc, Hoa Kỳ, Nhật Bản, Australia, Pháp, Malaysia, New Zealand, Indonesia, Singapore, Thái Lan).",
+      "B": "11 nước (Trung Quốc, Nga, Ấn Độ, Hàn Quốc, Hoa Kỳ, Nhật Bản, Australia, Pháp, Malaysia, New Zealand, Indonesia).",
+      "C": "10 nước (Trung Quốc, Nga, Ấn Độ, Hàn Quốc, Hoa Kỳ, Nhật Bản, Australia, Pháp, Malaysia, Singapore).",
+      "D": "12 nước (Trung Quốc, Nga, Ấn Độ, Hàn Quốc, Hoa Kỳ, Nhật Bản, Australia, Pháp, Malaysia, New Zealand, Indonesia, Lào)."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 5,
+    "question": "Những nhóm kỹ năng mềm cơ bản cần thiết đối với học viên đào tạo sĩ quan CHPĐBĐH ở TSQPB hiện nay?",
+    "options": {
+      "A": "Nhóm kỹ năng quản lý bản thân; nhóm kỹ năng tương tác với xã hội.",
+      "B": "Nhóm kỹ năng quản lý bản thân; nhóm kỹ năng quản lý thời gian; nhóm kỹ năng giải quyết các tình huống có vấn đề.",
+      "C": "Nhóm kỹ năng quản lý bản thân; nhóm kỹ năng giải quyết các tình huống có vấn đề.",
+      "D": "Nhóm kỹ năng quản lý bản thân; nhóm kĩ năng tương tác với xã hội; nhóm kỹ năng giải quyết các tình huống có vấn đề."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 6,
+    "question": "Theo Chủ tịch Hồ Chí Minh, mục đích của tự phê bình và phê bình là gì?",
+    "options": {
+      "A": "Để giúp nhau sửa chữa, giúp nhau tiến bộ. Cốt để sửa đổi cách làm việc cho tốt hơn, đúng hơn. Cốt đoàn kết và thống nhất nội bộ.",
+      "B": "Để giúp đỡ nhau phát hiện sai lầm, khuyết điểm.",
+      "C": "Để giúp đỡ cán bộ, đảng viên, quần chúng khắc phục sai lầm, khuyết điểm.",
+      "D": "Để đưa những cán bộ, đảng viên không đủ phẩm chất, năng lực ra khỏi Đảng."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 7,
+    "question": "Lực lượng thực hiện công tác quản lý tư tưởng quân nhân, nắm và định hướng dư luận trong Quân đội nhân dân Việt Nam?",
+    "options": {
+      "A": "Các cơ quan, đơn vị và mọi quân nhân.",
+      "B": "Gia đình, người thân của quân nhân.",
+      "C": "Quân nhân và tập thể quân nhân.",
+      "D": "Chính ủy, chính trị viên, cơ quan chính trị, cán bộ chính trị các cấp."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 8,
+    "question": "Đối tượng của công tác quản lý tư tưởng quân nhân, nắm và định hướng dư luận trong Quân đội nhân dân Việt Nam?",
+    "options": {
+      "A": "Quân nhân.",
+      "B": "Quân nhân và tập thể quân nhân.",
+      "C": "Tập thể quân nhân.",
+      "D": "Chính ủy, chính trị viên, cơ quan chính trị, cán bộ chính trị các cấp."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 9,
+    "question": "Thông tư 143 ngày 27 tháng 12 năm 2023 quy định xử lý kỷ luật trong Quân đội nhân dân Việt Nam, chấp hành không nghiêm mệnh lệnh thì bị xử lý kỷ luật như thế nào?",
+    "options": {
+      "A": "Khiển trách hoặc cảnh cáo.",
+      "B": "Khiển trách.",
+      "C": "Cảnh cáo.",
+      "D": "Hạ bậc lương."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 10,
+    "question": "Theo Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương Quy định về những điều đảng viên không được làm, có bao nhiêu điều đảng viên không được làm?",
+    "options": {
+      "A": "19 điều.",
+      "B": "18 điều.",
+      "C": "17 điều.",
+      "D": "20 điều."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 11,
+    "question": "Theo Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương Quy định về những điều đảng viên không được làm, Điều 19 có nội dung cụ thể là gì?",
+    "options": {
+      "A": "Tổ chức, tham gia các tổ chức, hội trái quy định của Đảng, pháp luật của Nhà nước; biểu tình, tụ tập đông người gây mất trật tự, an ninh.",
+      "B": "Chủ trì, tham mưu ban hành văn bản có nội dung trái quy định của Đảng, pháp luật của Nhà nước. Thực hiện không đúng quy định trong quản lý đầu tư, xây dựng, sử dụng nhà, đất, tài nguyên, tài chính, tài sản của Đảng, Nhà nước.",
+      "C": "Tặng, nhận quà dưới mọi hình thức để tác động đến tổ chức, người có trách nhiệm dẫn đến việc quyết định sai, có lợi riêng cho bản thân hoặc cá nhân, tổ chức, cơ quan, doanh nghiệp.",
+      "D": "Mê tín, hoạt động mê tín; ủng hộ hoặc tham gia các tôn giáo bất hợp pháp hoặc lợi dụng các hoạt động tôn giáo, tín ngưỡng để trục lợi."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 12,
+    "question": "Theo Quy định số 144-QĐ/TW ngày 09/5/2024 của Ban Chấp hành Trung ương Quy định chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới, Điều 1 có nội dung cụ thể là gì?",
+    "options": {
+      "A": "Bản lĩnh, đổi mới, sáng tạo, hội nhập.",
+      "B": "Doanh nghiệp.",
+      "C": "Gương mẫu, khiêm tốn, tu dưỡng rèn luyện, học tập suốt đời.",
+      "D": "Yêu nước, tôn trọng Nhân dân, tuyệt đối trung thành với Đảng, với Tổ quốc."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 13,
+    "question": "Theo Quy định số 144-QĐ/TW ngày 09/5/2024 của Ban Chấp hành Trung ương Quy định chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới, Điều 3 có nội dung cụ thể là gì?",
+    "options": {
+      "A": "Bản lĩnh, đổi mới, sáng tạo, hội nhập.",
+      "B": "Cần, kiệm, liêm, chính, chí công vô tư.",
+      "C": "Đoàn kết, kỷ cương, tình thương, trách nhiệm.",
+      "D": "Gương mẫu, khiêm tốn, tu dưỡng rèn luyện, học tập suốt đời."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 14,
+    "question": "Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia, có bao nhiêu quan điểm?",
+    "options": {
+      "A": "4 quan điểm.",
+      "B": "5 quan điểm.",
+      "C": "6 quan điểm.",
+      "D": "7 quan điểm."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "question": "Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia, xác định mục tiêu đến năm 2030 tỉ trọng xuất khẩu sản phẩm công nghệ cao trên tổng giá trị hàng hoá xuất khẩu là bao nhiêu?",
+    "options": {
+      "A": "Đạt tối thiểu 40%.",
+      "B": "Đạt tối thiểu 45%.",
+      "C": "Đạt tối thiểu 50%.",
+      "D": "Đạt tối thiểu 55%."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 16,
+    "question": "Chỉ thị số 42-CT/TW ngày 16/01/2025 của Bộ Chính trị về tăng cường sự lãnh đạo của đảng đối với công tác giáo dục cần, kiệm, liêm, chính, chí công vô tư, xác định bao nhiêu nhiệm vụ, giải pháp trọng tâm?",
+    "options": {
+      "A": "8 nhiệm vụ, giải pháp trọng tâm.",
+      "B": "5 nhiệm vụ, giải pháp trọng tâm.",
+      "C": "6 nhiệm vụ, giải pháp trọng tâm.",
+      "D": "7 nhiệm vụ, giải pháp trọng tâm."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 17,
+    "question": "Nghị quyết số 1657-NQ/QUTW ngày 20/12/2022 của Quân ủy Trung ương về đổi mới công tác giáo dục đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Quân đội trong tình hình mới, xác định mục tiêu đến hết năm 2025 có bao nhiêu % nhà giáo các các trường sĩ quan, trường đại học trực thuộc có học hàm, chứng chỉ ngoại ngữ đạt trình độ tiên sĩ?",
+    "options": {
+      "A": "10% trở lên.",
+      "B": "15% trở lên.",
+      "C": "20% trở lên.",
+      "D": "25% trở lên."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "question": "Nghị quyết số 369-NQ/ĐU ngày 22/3/2023 của Đảng ủy Binh chủng Pháo binh về đổi mới công tác giáo dục và đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Binh chủng trong tình hình mới, mục tiêu đến hết năm 2030 có bao nhiêu nhà giáo đạt tiêu chuẩn chức danh phó giáo sư?",
+    "options": {
+      "A": "01 đến 02 nhà giáo.",
+      "B": "02 đến 03 nhà giáo.",
+      "C": "01 đến 03 nhà giáo.",
+      "D": "02 đến 04 nhà giáo."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 19,
+    "question": "Nghị quyết số 1659-NQ/QUTW ngày 20/12/2022 của Quân ủy Trung ương về nâng cao chất lượng huấn luyện giai đoạn 2023-2030 và những năm tiếp theo, xác định cơ quan các cấp ứng dụng công nghệ thông tin, chuyển đổi số trong quản lý, điều hành huấn luyện, đào tạo giai đoạn 2023-2030 là bao nhiêu %?",
+    "options": {
+      "A": "Trên 80%.",
+      "B": "Trên 90%.",
+      "C": "Đạt 100%.",
+      "D": "Phấn đấu 100%."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 20,
+    "question": "Nghị quyết số 368-NQ/ĐU ngày 22/3/2023 của Đảng uỷ Binh chủng Pháo binh về nâng cao chất lượng huấn luyện giai đoạn 2023-2030 và những năm tiếp theo trong Binh chủng Pháo binh, có bao nhiêu quan điểm?",
+    "options": {
+      "A": "3 quan điểm.",
+      "B": "5 quan điểm.",
+      "C": "4 quan điểm.",
+      "D": "6 quan điểm."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 21,
+    "question": "Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân uỷ Trung ương về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong Quân đội, xác định mục tiêu đến năm 2030 tỷ lệ nhiệm vụ khoa học công nghệ có kết quả nghiên cứu ứng dụng vào thực tiễn là bao nhiêu?",
+    "options": {
+      "A": "Trên 90%.",
+      "B": "Trên 85%.",
+      "C": "Trên 80%.",
+      "D": "Trên 75%."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 22,
+    "question": "Thông tư số 118/2023/TT-BQP ngày 22/12/2023 của Bộ Quốc phòng Quy định và hướng dẫn thi đua, khen thưởng trong Quân đội nhân dân Việt Nam, quy định có bao nhiêu danh hiệu thi đua đối với cá nhân?",
+    "options": {
+      "A": "6 danh hiệu.",
+      "B": "5 danh hiệu.",
+      "C": "4 danh hiệu.",
+      "D": "3 danh hiệu."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 23,
+    "question": "Quan điểm về đối tác của cách mạng Việt Nam trong tình hình mới là gì?",
+    "options": {
+      "A": "Những ai chủ trương tôn trọng độc lập, chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, hợp tác bình đẳng, cùng có lợi với Việt Nam.",
+      "B": "Những ai chủ trương tôn trọng độc lập, chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, cùng có lợi với Việt Nam.",
+      "C": "Những ai chủ trương tôn trọng độc lập, chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, hợp tác toàn diện, cùng có lợi với Việt Nam.",
+      "D": "Những ai chủ trương tôn trọng chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, hợp tác bình đẳng, cùng có lợi với Việt Nam."
+    },
+    "answer": "A"
+  }
+]

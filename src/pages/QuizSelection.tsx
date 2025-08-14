@@ -14,7 +14,7 @@ const QuizSelection = () => {
     try {
       console.log("Đang tải dữ liệu...");
 
-      const response = await fetch("/questions.json");
+      const response = await fetch("/questions_ct.json");
       if (!response.ok) throw new Error(`Lỗi HTTP: ${response.status}`);
 
       const data: Question[] = await response.json();
