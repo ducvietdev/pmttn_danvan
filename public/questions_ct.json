@@ -184,7 +184,7 @@
       "C": "20% trở lên.",
       "D": "25% trở lên."
     },
-    "answer": "B"
+    "answer": "A"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
       "C": "01 đến 03 nhà giáo.",
       "D": "02 đến 04 nhà giáo."
     },
-    "answer": "B"
+    "answer": "A"
   },
   {
     "id": 19,
@@ -251,5 +251,36 @@
       "D": "Những ai chủ trương tôn trọng chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, hợp tác bình đẳng, cùng có lợi với Việt Nam."
     },
     "answer": "A"
+  },
+  {
+    "id": 24,
+    "question": "Mô hình “Chi bộ 4 tốt”, “Đảng bộ cơ sở 4 tốt” là gì?",
+    "options": {
+      "A": "Hoàn thành tốt nhiệm vụ chính trị; Chất lượng sinh hoạt tốt; Đoàn kết, kỷ luật tốt; Cán bộ, đảng viên tốt.",
+      "B": "Hoàn thành tốt nhiệm vụ được giao; Nền nếp sinh hoạt tốt; Đoàn kết, kỷ luật tốt; Quản lý đảng viên tốt.",
+      "C": "Hoàn thành tốt nhiệm vụ chính trị; Ra nghị quyết chất lượng tốt; Đoàn kết, kỷ luật tốt; Thực hành tiết kiệm tốt."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 25,
+    "question": "Quy trình tiến hành công tác quản lý tư tưởng quân nhân theo Quy chế số 775/QĐ-CT ngày 12/5/2022 của Tổng cục Chính trị?",
+    "options": {
+      "A": "5 bước.",
+      "B": "7 bước.",
+      "C": "6 bước.",
+      "D": "4 bước."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 26,
+    "question": "Đại hội Đảng bộ Binh chủng lần thứ XV, nhiệm kỳ 2025-2030 xác định đột phá?",
+    "options": {
+      "A": "Tập trung xây dựng lực lượng Pháo binh - Tên lửa cách mạng, chính quy, tinh nhuệ, hiện đại.",
+      "B": "Tiếp tục xây dựng Binh chủng tinh, gọn, mạnh tạo tiền đề xây dựng Binh chủng Pháo binh - Tên lửa cách mạng, chính quy, tinh nhuệ, hiện đại.",
+      "C": "Xây dựng Đề án Bộ Tư lệnh Pháo binh - Tên lửa tinh, gọn, mạnh."
+    },
+    "answer": "B"
   }
 ]
